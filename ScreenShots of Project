@@ -1,0 +1,61 @@
+Added full README for AWS VPC and S3 Lifecycle project
+![sarcastic-badge](screenshots/sarcastic-badge.svg)
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="140" viewBox="0 0 600 140" role="img" aria-label="Sarcastic badge">
+  <style>
+    .bg{ fill:#0f172a; rx:14; }
+    .pill{ fill:#111827; stroke:#374151; stroke-width:1; rx:12; }
+    .face{ fill:#FFD166; }
+    .eye{ fill:#111827; }
+    .mouth{ fill:none; stroke:#111827; stroke-width:4; stroke-linecap:round; }
+    .text{ fill:#e6edf3; font: 700 20px/1.1 "Segoe UI", Roboto, sans-serif; }
+    .sub{ fill:#9aa6b2; font: 600 14px/1 "Segoe UI", Roboto, sans-serif; }
+
+    /* Eye-roll animation */
+    @keyframes roll {
+      0%   { transform: translate(0,0) rotate(0deg); }
+      30%  { transform: translate(6px,-3px) rotate(12deg); }
+      60%  { transform: translate(-6px,3px) rotate(-8deg); }
+      100% { transform: translate(0,0) rotate(0deg); }
+    }
+    .eye-group { transform-origin: center; animation: roll 3s ease-in-out infinite; }
+
+    /* Text wobble */
+    @keyframes wiggle {
+      0%   { transform: translateX(0); }
+      25%  { transform: translateX(6px); }
+      50%  { transform: translateX(-6px); }
+      75%  { transform: translateX(3px); }
+      100% { transform: translateX(0); }
+    }
+    .sarc-text { animation: wiggle 4s ease-in-out infinite; }
+
+    /* subtle pulse */
+    @keyframes pulse {
+      0% { transform: scale(1); opacity:1; }
+      50% { transform: scale(1.02); opacity:0.95; }
+      100% { transform: scale(1); opacity:1; }
+    }
+    .badge { animation: pulse 6s ease-in-out infinite; }
+  </style>
+
+  <rect class="pill badge" x="6" y="6" width="588" height="128" rx="12"/>
+  <!-- face -->
+  <g transform="translate(34,18)">
+    <ellipse class="face" cx="70" cy="46" rx="46" ry="46"/>
+    <g class="eye-group" transform="translate(0,0)">
+      <!-- left eye (a tiny offset to mimic roll) -->
+      <circle class="eye" cx="52" cy="36" r="6"/>
+      <!-- right eye -->
+      <circle class="eye" cx="88" cy="36" r="6"/>
+    </g>
+    <!-- mouth (smirk) -->
+    <path class="mouth" d="M50 66 Q70 78 94 66" stroke-linejoin="round" />
+  </g>
+
+  <!-- Text -->
+  <g transform="translate(160,36)">
+    <text class="text sarc-text" x="0" y="6">Sure. That looks *totally* production-ready.</text>
+    <text class="sub" x="0" y="34">— Sarcasm Engine v2.0</text>
+  </g>
+</svg>
